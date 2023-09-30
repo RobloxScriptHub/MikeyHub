@@ -5,7 +5,7 @@ Join Our Discord For Teasers &amp; Future Updates For MH: https://discord.gg/ubP
 Will Answer Some Questions About MH
 
 # Will MikeyHub EVER Become Open Sourced:
-Yes, mikeyhub in the future will become open sourced.
+Yes, mikeyhub in the future will become open sourced. However, premium wont be opensourced.
 
 # Is MikeyHub Mobile Supported:
 ATM no. There are no future plans for mobile
