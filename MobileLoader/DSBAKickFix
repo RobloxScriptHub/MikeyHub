@@ -1,30 +1,5 @@
-repeat task.wait() until game:IsLoaded()
-
-local function isAdonisAC(table) -- stupid check
-	return rawget(table, "Detected") and typeof(rawget(table, "Detected")) == "function" and rawget(table, "RLocked")
-end
-
-warn("------------------------------")
-
-for _, v in next, getgc(true) do
-	if typeof(v) == "table" and isAdonisAC(v) then
-		-- warn(warn, "founded")
-		for i, v in next, v do
-			warn(print, i, typeof(v))
-			if rawequal(i, "Detected") then
-				-- warn(warn, "^^^^^^^")
-				local old;
-				old = hookfunction(v, function(action, info, nocrash)
-					if rawequal(action, "_") and rawequal(info, "_") and rawequal(nocrash, true) then
-						-- warn("checkup")
-						return old(action, info, nocrash)
-					end
-					-- warn(warn, "detected for :", action, info, nocrash)
-					return task.wait(9e9)
-				end)
-				warn("bypassed adonis ac")
-                break
-			end
+for k,v in pairs(getgc(true)) do
+		if pcall(function() return rawget(v,"indexInstance") end) and type(rawget(v,"indexInstance")) == "table" and  (rawget(v,"indexInstance"))[1] == "kick" then
+			v.tvk = {"kick",function() return game.Workspace:WaitForChild("") end}
 		end
-	end
-end
+	end	
